@@ -1,0 +1,26 @@
+<block id="start">
+    <lines>
+        <!-- A collection of lines-->
+        <!-- Each line should include "character" and "anim" attributes are optional, and will
+        change the current character and animation. Each character should probablty have defaults as
+        fallbacks-->
+        <l char="charcoal" anim="neutral">Where were you on the night of December 7th?</l>
+
+        <l>...</l>
+
+        <l>The night of...</l>
+
+        <l anim="intense">DUNDUNDUNNNNNN...</l>
+
+        <l char="bonnie" anim="animeSweatDrop" fontStyle="italic">Here he goes again...</l>
+
+        <l char="charcoal">THE MURRRRRRRRDER!!!!!!</l>
+
+        <l char="birdsby" anim="armsCrossed">This bird ain't singin' without a lawyer present.</l>
+        <choices>
+            <choice to="aggressive">
+                JUSTICE!
+            </choice>
+        </choices>
+    </lines>
+</block>
