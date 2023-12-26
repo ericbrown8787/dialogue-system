@@ -30,12 +30,30 @@ This document describes a proposed standard for organizing and parsing dialogue 
     </dialogue>
 
     <choices>
-        <c to="aggressive">
+        <c to="escalate">
             [Aggressive]JUUUUSTIIIICE!
         </c>
         <c to="backOff">
             [Back Off]You win this one, bird. For now.
         </c>
+    </choices>
+</block>
+
+<block id="escalate">
+    <dialogue>
+        <l narration="true">Detective Cats smashes a nearby bottle of wine on the table, and threatens Birdsby with its jagged edges. Birdsby picks up a barstool. Bonnie draws a pistol. The busboy has a stick of dynamite for some reason. A bar fight ensues.</l>
+    </dialogue>
+    <choices>
+        <c loadScene="hospital">[Wake up in the hospital]</c>
+    </choices>
+</block>
+
+<block id="backOff">
+    <dialogue>
+        <l actor="birdsby" anim="smug">That's what I thought.</l>
+    </dialogue>
+    <choices>
+        <c fontStyle="italic" exit="true"> [Leave] </c>
     </choices>
 </block>
 ```
@@ -58,14 +76,23 @@ Denotes a block of dialogue. A block can be defined as a single, self-contained 
 ```
 Denotes a single dialogue choice. Must be contained within a `choices` tag. 
 #### Attributes
-- `to` : (**Required**) Must equal the value of a valid block ID.  
+- `to` : (**Required***) Must equal the value of a valid block ID. 
+
+- `loadScene`: (**Required***) Exits the dialogue and loads a different scene. Must equal the identifier for a valid scene.
+
+- `fontStyle` : Specifies a font style to use. If no font style is specified, the default will be used(Presumably normal weight, non-italic, non-oblique). Possible values include: 
+    - bold
+    - italic
+    - oblique
+
+    \* a `<c>` tag must have **either** a `to` or `loadScene` attribute. 
 ---
 
 ### Choices
 ```xml
 <choices> </choices>
 ```
-Denotes a list of choice(`<c>`) tags.
+Denotes a list of choice(`<c>`) tags. Each `<block>` tag must contain **no more than 1** `<choices>` tag. 
 
 ---
 
@@ -93,6 +120,8 @@ Denotes a single line of dialogue. Must be contained within a `<dialogue>` tag.
     - bold
     - italic
     - oblique
+
+- `narration` : If **true**, apply text style for narration. 
 
 ## Resources
 [W3 Schools: XML Tutorial](https://www.w3schools.com/xml/default.asp)
