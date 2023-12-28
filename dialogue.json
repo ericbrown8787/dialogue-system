@@ -1,0 +1,71 @@
+[
+    {
+        "id": "start",
+        "dialogue": [
+            {
+                "actor": "charcoal",
+                "anim": "neutral",
+                "text": "Where were you on the night of December 7th?"
+            },
+            {
+                "text": "..."
+            },
+            {
+                "anim": "intense",
+                "text": "DUNDUNDUNNNNN..."
+            },
+            {
+                "actor": "bonnie",
+                "anim": "animeSweatDrop",
+                "fontStyle": "italic",
+                "text": "Here he goes again..."
+            },
+            {
+                "actor": "charcoal",
+                "anim": "crazed",
+                "text": "THE MURRRRRRRRDER!!!!!!"
+            }
+        ],
+        "choices": [
+            {
+                "to": "escalate",
+                "text": "[Escalate the situation] JUUUUUSTIIIICE!!!"
+            },
+            {
+                "to": "backOff",
+                "text": "[Back off] You win this one, bird. For now."
+            }
+        ]
+    },
+    {
+        "id": "escalate",
+        "dialogue": [
+            {
+                "narration": true,
+                "text": "Detective Cats smashes a nearby bottle of wine on the table, and threatens Birdsby with its jagged edges. Birdsby picks up a barstool. Bonnie draws a pistol. The busboy has a stick of dynamite for some reason. A bar fight ensues."
+            }
+        ],
+        "choices": [
+            {
+                "loadScene": "hospital",
+                "text": "[Wake up in the hospital]"
+            }
+        ]
+    },
+    {
+        "id": "backOff",
+        "dialogue": [
+            {
+                "actor": "birdsby",
+                "anim": "smug",
+                "text": "That's what I thought, cat."
+            }
+        ],
+        "choices": [
+            {
+                "loadScene": "bar",
+                "text": "[Leave]"
+            }
+        ]
+    }
+]
