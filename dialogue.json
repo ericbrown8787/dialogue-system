@@ -17,12 +17,12 @@
             {
                 "actor": "bonnie",
                 "anim": "animeSweatDrop",
-                "fontStyle": "italic",
+                "internal": true,
                 "text": "Here he goes again..."
             },
             {
                 "actor": "charcoal",
-                "anim": "crazed",
+                "anim": "unhinged",
                 "text": "THE MURRRRRRRRDER!!!!!!"
             }
         ],
